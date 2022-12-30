@@ -113,7 +113,7 @@ export const Home = () => {
                 />
                 <CardContent>
                   <Typography gutterBottom variant="h5" component="div">
-                    Corderl Moderno
+                    Cordel Moderno
                   </Typography>
                   <Typography variant="body2" color="text.secondary">
                     Esse projeto foi desenvolvido para treino de HTML e CSS.
