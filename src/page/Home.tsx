@@ -37,7 +37,7 @@ export const Home = () => {
           </Typography>
 
           <Button variant="contained">
-            <Link to="/sobre" >Saiba mais</Link>
+            <Link to="/sobre">Saiba mais</Link>
           </Button>
         </Grid>
         <Grid item xs={4} sx={{display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: 5}}>
@@ -66,7 +66,7 @@ export const Home = () => {
 
           <Container fixed>
             <Box sx={{
-              bgcolor: '#123456',
+              bgcolor: '#45aaf2',
               height: '100%',
               display: 'flex',
               alignItems: 'center',
@@ -168,7 +168,7 @@ export const Home = () => {
             </Box>
           </Container>
 
-          <Icon fontSize="large" sx={{ background: 'blue', marginTop: 3, }}>
+          <Icon fontSize="large" sx={{ background: '#45aaf2', marginTop: 3, }}>
             <Link to="/projetos" >add</Link>
           </Icon>
         </Grid>
