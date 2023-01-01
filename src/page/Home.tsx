@@ -13,13 +13,15 @@ import {
   useMediaQuery,
   useTheme,
 } from '@mui/material';
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { LayoutBaseDePagina } from '../shared/layouts';
 
 export const Home = () => {
   const theme = useTheme();
   const smDown = useMediaQuery(theme.breakpoints.down('sm'));
   const mdDown = useMediaQuery(theme.breakpoints.down('md'));
+
+  const navigate = useNavigate();
 
   return (
     <LayoutBaseDePagina
@@ -36,8 +38,11 @@ export const Home = () => {
             Olá, seja bem vindo! me chamo André Lucas, sou um jovem padawan na área de desenvolvimento web. Sou uma pessoa que ama Tecnologia e tudo que ela pode proporcionar para o mundo. Comecei essa minha jornada, com um curso de Web Designer em 2015, apesar de não saber muito bem do que se tratava naquela época, com o decorrer do curso fui apredendo e me interessado por essa área...
           </Typography>
 
-          <Button variant="contained">
-            <Link to="/sobre">Saiba mais</Link>
+          <Button
+            onClick={() => navigate('/sobre')}
+            sx={{ background: '#45aaf2' }}
+          >
+            Saiba mais
           </Button>
         </Grid>
         <Grid item xs={4} sx={{display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: 5}}>
@@ -168,9 +173,15 @@ export const Home = () => {
             </Box>
           </Container>
 
-          <Icon fontSize="large" sx={{ background: '#45aaf2', marginTop: 3, }}>
-            <Link to="/projetos" >add</Link>
-          </Icon>
+          <Button onClick={() => navigate('/projetos')}>
+            <Icon
+              fontSize="large"
+              sx={{ background: '#45aaf2', marginTop: 3 }}
+            >
+              add
+            </Icon>
+          </Button>
+
         </Grid>
         
       </Grid>
