@@ -173,10 +173,12 @@ export const Home = () => {
             </Box>
           </Container>
 
-          <Button onClick={() => navigate('/projetos')}>
+          <Button
+            onClick={() => navigate('/projetos')}
+            sx={{ background: '#45aaf2', marginTop: '30px' }}
+          >
             <Icon
               fontSize="large"
-              sx={{ background: '#45aaf2', marginTop: 3 }}
             >
               add
             </Icon>
