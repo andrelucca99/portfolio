@@ -1,8 +1,10 @@
-import { Avatar, Box, Grid, Typography, useTheme } from '@mui/material';
+import { Avatar, Box, Grid, Typography, useMediaQuery, useTheme } from '@mui/material';
 import { LayoutBaseDePagina } from '../shared/layouts';
 
 export const PageSobre: React.FC = () => {
   const theme = useTheme();
+  const smDown = useMediaQuery(theme.breakpoints.down('sm'));
+  const mdDown = useMediaQuery(theme.breakpoints.down('md'));
 
   const medalhas = [
     {
@@ -35,66 +37,81 @@ export const PageSobre: React.FC = () => {
     <LayoutBaseDePagina
       titulo='Sobre'
     >
-      <Grid container spacing={5} sx={{ padding: 4, color: "#fff" }}>
-        <Grid item xs={6} md={8}>
+      <Grid container item spacing={5} sx={{ padding: 4, color: "#fff" }}>
+        <Grid item xs={8} sm={8} md={8} lg={8} xl={8}>
           <Typography
             variant="subtitle1"
-            gutterBottom
             component="div"
-            padding="15px"
-            bgcolor="#45aaf2"
-            borderRadius="5px 0 0 5px"
+            sx={{
+              padding: 4,
+              lineHeight: 2,
+              bgcolor: "#7158e2",
+              borderRadius: "5px 0 0 5px",
+            }}
           >
             Olá me chamo André Lucas, sou um jovem padawan na área de desenvolvimento web. Sou uma pessoa que ama Tecnologia e tudo que ela pode proporcionar para o mundo. Comecei essa minha jornada, com um curso de Web Designer em 2015, apesar de não saber muito bem do que se tratava naquela época, com o decorrer do curso fui apredendo e me interessado por essa área. Agora estudo Desenvolvimento Web na Trybe, uma escola que ensina a programar, a aprender e a trabalhar. Trabalho e acredito em ações que possam gerar um impacto positivo na vida das pessoas.
           </Typography>
         </Grid>
         <Grid
           item
-          xs={6}
-          md={4}
+          xs={4} sm={4} md={4} lg={4} xl={4}
           sx={{
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
             flexDirection: 'column',
-            gap: 1,
-            bgcolor: "#45aaf2",
-            marginTop: 5,
+            bgcolor: "#7d5fff",
             borderRadius: '0 10px 10px 0',
-            height: 226,
+            marginTop: 5,
+            padding: 2,
           }}>
           <Avatar
             sx={{
-              height: theme.spacing(20),
-              width: theme.spacing(20),
+              height: theme.spacing(15),
+              width: theme.spacing(15),
               borderRadius: '10px',
             }}
             src="https://avatars.githubusercontent.com/u/66281231?v=4" 
           />
-          <Typography>Desenvolvedor Front-End</Typography>
+          <Typography variant="h6">Desenvolvedor Front-End</Typography>
         </Grid>
-        <Grid item xs={6} md={12}>
+        <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
           <Box sx={{
-              height: 150,
-              bgcolor: "#45aaf2",
+              bgcolor: "#7158e2",
               borderRadius: 1,
               padding: 1,
+              display: 'flex',
+              alignItems: 'center',
+              flexDirection: 'column',
+              justifyContent: 'center',
             }}
           >
-            <Typography variant="h5">Habilidades:</Typography>
-            <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 5 }}>
-              {medalhas.map(item => (
-                <Box sx={{
+            <Typography variant="h5">Habilidades</Typography>
+
+            <Box>
+              <Grid
+                item
+                xs={12} sm={2} md={2} lg={2} xl={2}
+                sx={{
                   display: 'flex',
                   alignItems: 'center',
-                  justifyContent: 'center',
-                  flexDirection: 'column',
+                  flexDirection: smDown ? 'column' : 'row' && mdDown ? 'column' : 'row',
+                  gap: 8,
                   padding: 1,
-                }}>
-                  <Avatar src={item.imagem} />
-                  <Typography>{item.name}</Typography>  
-                </Box>
-              ))}
+                }}
+              >
+                {medalhas.map(item => (
+                  <Box sx={{
+                    display: 'flex',
+                    alignItems: 'center',
+                    flexDirection: 'column',
+                  }}
+                  >
+                    <Avatar src={item.imagem} />
+                    <Typography>{item.name}</Typography> 
+                  </Box> 
+                ))}
+              </Grid>
             </Box>
           </Box>
         </Grid>

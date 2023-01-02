@@ -28,39 +28,54 @@ export const Home = () => {
       titulo="</>"
     >
       <Grid container spacing={2} sx={{padding: 4}}>
-        <Grid item xs={8} sx={{padding: 1, marginBottom: 5}}>
+        <Grid item xs={8} sx={{bgcolor: "#7158e2", padding: 1, marginBottom: 5}}>
           <Typography
             variant="subtitle1"
-            gutterBottom
             component="div"
-            padding="10px"
+            sx={{
+              bgcolor: "#7158e2",
+              lineHeight: 2,
+              padding: 3,
+              color: "#fff",
+            }}
           >
             Olá, seja bem vindo! me chamo André Lucas, sou um jovem padawan na área de desenvolvimento web. Sou uma pessoa que ama Tecnologia e tudo que ela pode proporcionar para o mundo. Comecei essa minha jornada, com um curso de Web Designer em 2015, apesar de não saber muito bem do que se tratava naquela época, com o decorrer do curso fui apredendo e me interessado por essa área...
           </Typography>
 
           <Button
             onClick={() => navigate('/sobre')}
-            sx={{ background: '#45aaf2' }}
+            sx={{ bgcolor: '#432ea1', marginTop: 1, color: "#fff", padding: 1 }}
           >
             Saiba mais
           </Button>
         </Grid>
-        <Grid item xs={4} sx={{display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: 5}}>
+
+        <Grid item xs={4}
+          sx={{
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            marginBottom: 5,
+            bgcolor: "#7158e2",
+          }}>
           <Avatar
-            sx={{ height: theme.spacing(20), width: theme.spacing(20) }}
-            src="https://avatars.githubusercontent.com/u/66281231?v=4" 
+            sx={{ bgcolor: "#faf8f3", height: theme.spacing(15), width: theme.spacing(15) }}
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Antu_text-x-dtd.svg/1024px-Antu_text-x-dtd.svg.png" 
           />
         </Grid>
+
         <Grid
           item
-          xs={12} 
+          xs={12} sm={12} md={12} lg={12} xl={12}
           sx={{
             padding: 5,
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
             flexDirection: 'column',
-          }}>
+            margin: '0 auto',
+          }}
+          >
           <Typography
             variant="h5"
             gutterBottom
@@ -71,7 +86,7 @@ export const Home = () => {
 
           <Container fixed>
             <Box sx={{
-              bgcolor: '#45aaf2',
+              bgcolor: '#7158e2',
               height: '100%',
               display: 'flex',
               alignItems: 'center',
@@ -175,7 +190,7 @@ export const Home = () => {
 
           <Button
             onClick={() => navigate('/projetos')}
-            sx={{ background: '#45aaf2', marginTop: '30px' }}
+            sx={{ background: '#7158e2', marginTop: '30px' }}
           >
             <Icon
               fontSize="large"

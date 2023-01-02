@@ -11,7 +11,7 @@ export const PageProjeto: React.FC = () => {
       titulo='Projetos'
     >
       <Container fixed sx={{
-        bgcolor: '#45aaf2',
+        bgcolor: '#7158e2',
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
