@@ -68,6 +68,11 @@ export const MenuLateral: React.FC<IMenuLateralProps> = ({ children }) => {
             </List>
           </Box>
 
+          <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 1, }}>
+            <Icon>linkedIn</Icon>Linkedin
+            <Icon>linkedIn</Icon>GitHub
+          </Box>
+
           <Box>
             <List component="nav">
               <ListItemButton onClick={toggleTheme}>
