@@ -24,11 +24,11 @@ export const PageContato: React.FC = () => {
             width: 400,
           }}>
             <TextField
-              sx={{ width: 300, marginBottom: 1, bgcolor: '#f6f6f6', }}
+              sx={{ width: 300, marginBottom: 1, bgcolor: '#b3a7ec', }}
               label="Nome"
             />
-            <TextField label="Email" sx={{ width: 300, marginBottom: 1, bgcolor: '#f6f6f6', }} />
-            <TextField sx={{ width: 300, bgcolor: '#f6f6f6', }}
+            <TextField label="Email" sx={{ width: 300, marginBottom: 1, bgcolor: '#b3a7ec', }} />
+            <TextField sx={{ width: 300, bgcolor: '#b3a7ec', }}
               label="Messagem"
               multiline
               rows={5}

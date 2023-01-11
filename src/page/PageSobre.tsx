@@ -49,7 +49,7 @@ export const PageSobre: React.FC = () => {
               borderRadius: "5px 0 0 5px",
             }}
           >
-            Olá me chamo André Lucas, sou um jovem padawan na área de desenvolvimento web. Sou uma pessoa que ama Tecnologia e tudo que ela pode proporcionar para o mundo. Comecei essa minha jornada, com um curso de Web Designer em 2015, apesar de não saber muito bem do que se tratava naquela época, com o decorrer do curso fui apredendo e me interessado por essa área. Agora estudo Desenvolvimento Web na Trybe, uma escola que ensina a programar, a aprender e a trabalhar. Trabalho e acredito em ações que possam gerar um impacto positivo na vida das pessoas.
+            Olá, seja bem vindo! me chamo André Lucas, sou Desenvolverdor Front-end. Sou pessoa que gosta de analisar todo o cenário ao meu redor e com a ajuda da tecnologia, busco por desenvolver soluções que possam gerar um impacto positivo na vida das pessoas usuárias, sempre priorizando a inovação e a acessibilidade. Agora estudo Desenvolvimento Web na Trybe, uma escola que ensina a programar, a aprender e a trabalhar. Trabalho e acredito em ações que possam gerar um impacto positivo na vida das pessoas.
           </Typography>
         </Grid>
         <Grid
@@ -86,7 +86,7 @@ export const PageSobre: React.FC = () => {
               justifyContent: 'center',
             }}
           >
-            <Typography variant="h5">Habilidades</Typography>
+            <Typography variant="h5" sx={{ margin: 2, }}>Principais Stacks que utilizo no dia a dia</Typography>
 
             <Box>
               <Grid

@@ -16,7 +16,7 @@ export const PageProjeto: React.FC = () => {
         alignItems: 'center',
         justifyContent: 'center',
         flexDirection: 'column',
-        gap: 5,
+        gap: 1,
       }}>
         <Box sx={{
           height: '100%',
@@ -28,6 +28,7 @@ export const PageProjeto: React.FC = () => {
           gap: 1,
           padding: 1,
         }}>
+
           <Card sx={{ maxWidth: 220, height: 270 }}>
             <CardMedia
               sx={{ height: 100 }}
@@ -45,12 +46,14 @@ export const PageProjeto: React.FC = () => {
             <CardActions>
               <Button
                 href="https://book-orpin.vercel.app/"
+                target="_blank"
                 size="small"
               >
                 Site
               </Button>
               <Button
                 href="https://github.com/andrelucca99/Book/"
+                target="_blank"
                 size="small"
               >
                 Repositorio
@@ -75,12 +78,14 @@ export const PageProjeto: React.FC = () => {
             <CardActions>
               <Button
                 href="https://dashboard-star-wars-one.vercel.app/"
+                target="_blank"
                 size="small"
               >
                 Site
               </Button>
               <Button
                 href="https://github.com/andrelucca99/Dashboard_Star-Wars"
+                target="_blank"
                 size="small"
               >
                 Repositorio
@@ -91,28 +96,28 @@ export const PageProjeto: React.FC = () => {
           <Card sx={{ maxWidth: 220, height: 270 }}>
             <CardMedia
               sx={{ height: 100 }}
-              image="https://ckstudiodabeleza.files.wordpress.com/2018/03/em-breve.gif"
-              title="Lorem"
+              image="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTK6ouqex9e1euKj52RpTEKTpePVPBKcvHOSQ&usqp=CAU"
+              title="Corderl Moderno"
             />
             <CardContent>
               <Typography gutterBottom variant="h5" component="div">
-                Lorem
+                Cordel Moderno
               </Typography>
               <Typography variant="body2" color="text.secondary">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Esse projeto foi desenvolvido para treino de HTML e CSS.
               </Typography>
             </CardContent>
             <CardActions>
               <Button
-                disabled
-                href="#"
+                href="https://projeto-cordel-psi.vercel.app/"
+                target="_blank"
                 size="small"
               >
                 Site
               </Button>
               <Button
-                disabled
-                href="#"
+                href="https://github.com/andrelucca99/projeto-cordel"
+                target="_blank"
                 size="small"
               >
                 Repositorio
@@ -136,28 +141,29 @@ export const PageProjeto: React.FC = () => {
           <Card sx={{ maxWidth: 220, height: 270 }}>
             <CardMedia
               sx={{ height: 100 }}
-              image="https://ckstudiodabeleza.files.wordpress.com/2018/03/em-breve.gif"
-              title="Lorem"
+              image="https://github.com/andrelucca99/react-typescript-material-ui/raw/master/src/app.gif"
+              title="Cadastros de pessoas"
             />
             <CardContent>
               <Typography gutterBottom variant="h5" component="div">
-                Lorem
+                Cadastros
               </Typography>
               <Typography variant="body2" color="text.secondary">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                você poderá criar um CRUD de cadastros de pessoa e cidades.
               </Typography>
             </CardContent>
             <CardActions>
               <Button
                 disabled
                 href="#"
+                target="_blank"
                 size="small"
               >
                 Site
               </Button>
               <Button
-                disabled
-                href="#"
+                href="https://github.com/andrelucca99/react-typescript-material-ui"
+                target="_blank"
                 size="small"
               >
                 Repositorio
@@ -183,6 +189,7 @@ export const PageProjeto: React.FC = () => {
               <Button
                 disabled
                 href="#"
+                target="_blank"
                 size="small"
               >
                 Site
@@ -190,6 +197,7 @@ export const PageProjeto: React.FC = () => {
               <Button
                 disabled
                 href="#"
+                target="_blank"
                 size="small"
               >
                 Repositorio
@@ -215,6 +223,7 @@ export const PageProjeto: React.FC = () => {
               <Button
                 disabled
                 href="#"
+                target="_blank"
                 size="small"
               >
                 Site
@@ -222,6 +231,7 @@ export const PageProjeto: React.FC = () => {
               <Button
                 disabled
                 href="#"
+                target="_blank"
                 size="small"
               >
                 Repositorio

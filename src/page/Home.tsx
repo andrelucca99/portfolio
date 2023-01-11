@@ -27,8 +27,15 @@ export const Home = () => {
     <LayoutBaseDePagina
       titulo="</>"
     >
-      <Grid container spacing={2} sx={{padding: 4}}>
-        <Grid item xs={8} sx={{bgcolor: "#7158e2", padding: 1, marginBottom: 5}}>
+      <Grid container spacing={1} sx={{padding: 4}}>
+        <Grid item xs={8} sx={{
+          bgcolor: "#7158e2",
+          margin: 1,
+          borderRadius: 2,
+          padding: 1,
+          marginBottom: 5,
+        }}>
+
           <Typography
             variant="subtitle1"
             component="div"
@@ -39,28 +46,30 @@ export const Home = () => {
               color: "#fff",
             }}
           >
-            Olá, seja bem vindo! me chamo André Lucas, sou um jovem padawan na área de desenvolvimento web. Sou uma pessoa que ama Tecnologia e tudo que ela pode proporcionar para o mundo. Comecei essa minha jornada, com um curso de Web Designer em 2015, apesar de não saber muito bem do que se tratava naquela época, com o decorrer do curso fui apredendo e me interessado por essa área...
+            Olá, seja bem vindo! me chamo André Lucas, sou Desenvolverdor Front-end. Sou pessoa que gosta de analisar todo o cenário ao meu redor e com a ajuda da tecnologia, busco por desenvolver soluções que possam gerar um impacto positivo na vida das pessoas usuárias, sempre priorizando a inovação e a acessibilidade.
           </Typography>
 
           <Button
             onClick={() => navigate('/sobre')}
-            sx={{ bgcolor: '#432ea1', marginTop: 1, color: "#fff", padding: 1 }}
+            sx={{ bgcolor: '#432ea1', marginLeft: 2, color: "#fff", padding: 1 }}
           >
             Saiba mais
           </Button>
         </Grid>
 
-        <Grid item xs={4}
+        <Grid item xs={2}
           sx={{
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
             marginBottom: 5,
-            bgcolor: "#7158e2",
+            marginLeft: 5,
+            // bgcolor: "#7158e2",
+            borderRadius: 5,
           }}>
           <Avatar
-            sx={{ bgcolor: "#faf8f3", height: theme.spacing(15), width: theme.spacing(15) }}
-            src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Antu_text-x-dtd.svg/1024px-Antu_text-x-dtd.svg.png" 
+            sx={{ bgcolor: "#7158e2", height: theme.spacing(25), width: theme.spacing(25), border: '2px solid #7158e2', }}
+            src="https://media1.giphy.com/media/qgQUggAC3Pfv687qPC/giphy.gif?cid=ecf05e47oz1ey4dlvjq9lkh4g9u5tprizv0rw4oh0fzxxybm&rid=giphy.gif&ct=g" 
           />
         </Grid>
 
@@ -93,8 +102,10 @@ export const Home = () => {
               justifyContent: 'center',
               flexDirection: smDown ? 'column' : 'row' && mdDown ? 'column' : 'row',
               gap: 5,
-              padding: 1,
+              padding: 2,
+              borderRadius: 2,
             }}>
+
               <Card sx={{ maxWidth: 220, height: 270 }}>
                 <CardMedia
                   sx={{ height: 100 }}
@@ -112,12 +123,14 @@ export const Home = () => {
                 <CardActions>
                   <Button
                     href="https://book-orpin.vercel.app/"
+                    target="_blank"
                     size="small"
                   >
                     Site
                   </Button>
                   <Button
                     href="https://github.com/andrelucca99/Book/"
+                    target="_blank"
                     size="small"
                   >
                     Repositorio
@@ -128,26 +141,29 @@ export const Home = () => {
               <Card sx={{ maxWidth: 220, height: 270 }}>
                 <CardMedia
                   sx={{ height: 100 }}
-                  image="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTK6ouqex9e1euKj52RpTEKTpePVPBKcvHOSQ&usqp=CAU"
-                  title="Corderl Moderno"
+                  image="https://github.com/andrelucca99/react-typescript-material-ui/raw/master/src/app.gif"
+                  title="Cadastros de pessoas"
                 />
                 <CardContent>
                   <Typography gutterBottom variant="h5" component="div">
-                    Cordel Moderno
+                    Cadastros
                   </Typography>
                   <Typography variant="body2" color="text.secondary">
-                    Esse projeto foi desenvolvido para treino de HTML e CSS.
+                    você poderá criar um CRUD de cadastros de pessoa e cidades.
                   </Typography>
                 </CardContent>
                 <CardActions>
                   <Button
-                    href="https://projeto-cordel-psi.vercel.app/"
+                    disabled
+                    href="#"
+                    target="_blank"
                     size="small"
                   >
                     Site
                   </Button>
                   <Button
-                    href="https://github.com/andrelucca99/projeto-cordel"
+                    href="https://github.com/andrelucca99/react-typescript-material-ui"
+                    target="_blank"
                     size="small"
                   >
                     Repositorio
@@ -172,12 +188,14 @@ export const Home = () => {
                 <CardActions>
                   <Button
                     href="https://dashboard-star-wars-one.vercel.app/"
+                    target="_blank"
                     size="small"
                   >
                     Site
                   </Button>
                   <Button
                     href="https://github.com/andrelucca99/Dashboard_Star-Wars"
+                    target="_blank"
                     size="small"
                   >
                     Repositorio
@@ -190,7 +208,7 @@ export const Home = () => {
 
           <Button
             onClick={() => navigate('/projetos')}
-            sx={{ background: '#7158e2', marginTop: '30px' }}
+            sx={{ background: '#7158e2', marginTop: '50px' }}
           >
             <Icon
               fontSize="large"

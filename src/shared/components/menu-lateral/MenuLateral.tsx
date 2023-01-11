@@ -1,4 +1,4 @@
-import { Avatar, Divider, Drawer, Icon, List, ListItemButton, ListItemIcon, ListItemText, useMediaQuery, useTheme } from '@mui/material';
+import { Avatar, Button, Divider, Drawer, Icon, List, ListItemButton, ListItemIcon, ListItemText, useMediaQuery, useTheme } from '@mui/material';
 import { Box } from '@mui/system';
 import { useMatch, useNavigate, useResolvedPath } from 'react-router-dom';
 import { useAppThemeContext, useDrawerContext } from '../../contexts';
@@ -69,8 +69,21 @@ export const MenuLateral: React.FC<IMenuLateralProps> = ({ children }) => {
           </Box>
 
           <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 1, }}>
-            <Icon>linkedIn</Icon>Linkedin
-            <Icon>linkedIn</Icon>GitHub
+            <Button
+                href="https://www.linkedin.com/in/andre-lucas20/"
+                target="_blank"
+                size="small"
+              >
+                Linkedin
+            </Button>
+
+            <Button
+                href="https://github.com/andrelucca99"
+                target="_blank"
+                size="small"
+              >
+                GitHub
+            </Button>
           </Box>
 
           <Box>

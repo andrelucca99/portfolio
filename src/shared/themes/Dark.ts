@@ -4,10 +4,10 @@ export const DarkTheme = createTheme({
   palette: {
     mode: 'dark',
     primary: {
-      main: '#ffffff',
-      dark: '#ffffff',
-      light: '#ffffff',
-      contrastText: '#ffffff',
+      main: '#fff',
+      dark: '#fff',
+      light: '#fff',
+      contrastText: '#fff',
     },
     background: {
       paper: '#303134',
@@ -16,7 +16,7 @@ export const DarkTheme = createTheme({
   },
   typography: {
     allVariants: {
-      color: 'white',
+      color: '#fff',
     }
   }
 });
