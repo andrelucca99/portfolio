@@ -28,11 +28,11 @@ export const AppRoutes = () => {
         path: '/projetos',
         label: 'Projetos',
       },
-      {
-        icon: 'phone',
-        path: '/contato',
-        label: 'Contato',
-      },
+      // {
+      //   icon: 'phone',
+      //   path: '/contato',
+      //   label: 'Contato',
+      // },
     ]);
   }, []);
 
@@ -41,7 +41,7 @@ export const AppRoutes = () => {
       <Route path="/pagina-inicial" element={<Home />} />
       <Route path="/sobre" element={<PageSobre />} />
       <Route path="/projetos" element={<PageProjeto />} />
-      <Route path="/contato" element={<PageContato />} />
+      {/* <Route path="/contato" element={<PageContato />} /> */}
 
       <Route path="*" element={<Navigate to="/pagina-inicial" />} />
     </Routes>

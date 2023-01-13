@@ -1,4 +1,4 @@
-import { Box, Button, Container, TextField } from '@mui/material';
+import { Box, Button, Container, TextField, Typography } from '@mui/material';
 import { LayoutBaseDePagina } from '../shared/layouts';
 
 export const PageContato: React.FC = () => {
@@ -7,41 +7,34 @@ export const PageContato: React.FC = () => {
     <LayoutBaseDePagina
       titulo='Contato'
     >
-      <Container fixed>
-        <Box sx={{
+      <Box sx={{
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
+          flexDirection: 'column',
           padding: 5,
           bgcolor: '#7158e2',
         }}>
-          <Box sx={{
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            flexDirection: 'column',
-            padding: 2,
-            width: 400,
-          }}>
-            <TextField
-              sx={{ width: 300, marginBottom: 1, bgcolor: '#b3a7ec', }}
-              label="Nome"
-            />
-            <TextField label="Email" sx={{ width: 300, marginBottom: 1, bgcolor: '#b3a7ec', }} />
-            <TextField sx={{ width: 300, bgcolor: '#b3a7ec', }}
-              label="Messagem"
-              multiline
-              rows={5}
-            />
-            <Button
-              sx={{ bgcolor: '#432ea1', color: "#fff", margin: 1, }}
-              // disabled
+        <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 1, }}>
+          <Button
+              href="https://www.linkedin.com/in/andre-lucas20/"
+              target="_blank"
+              size="small"
+              sx={{ color: "#fff" }}
             >
-              Enviar
-            </Button>
-          </Box>
+              Linkedin
+          </Button>
+
+          <Button
+              href="https://github.com/andrelucca99"
+              target="_blank"
+              size="small"
+              sx={{ color: "#fff" }}
+            >
+              GitHub
+          </Button>
         </Box>
-      </Container>
+        </Box>
     </LayoutBaseDePagina>
   );
 };

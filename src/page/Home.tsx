@@ -34,6 +34,7 @@ export const Home = () => {
           borderRadius: 2,
           padding: 1,
           marginBottom: 5,
+          marginLeft: 5,
         }}>
 
           <Typography
@@ -68,7 +69,7 @@ export const Home = () => {
             borderRadius: 5,
           }}>
           <Avatar
-            sx={{ bgcolor: "#7158e2", height: theme.spacing(25), width: theme.spacing(25), border: '2px solid #7158e2', }}
+            sx={{ bgcolor: "#7158e2", height: theme.spacing(20), width: theme.spacing(20), border: '2px solid #7158e2', }}
             src="https://media1.giphy.com/media/qgQUggAC3Pfv687qPC/giphy.gif?cid=ecf05e47oz1ey4dlvjq9lkh4g9u5tprizv0rw4oh0fzxxybm&rid=giphy.gif&ct=g" 
           />
         </Grid>
