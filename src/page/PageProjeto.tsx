@@ -174,15 +174,15 @@ export const PageProjeto: React.FC = () => {
           <Card sx={{ maxWidth: 220, height: 270 }}>
             <CardMedia
               sx={{ height: 100 }}
-              image="https://ckstudiodabeleza.files.wordpress.com/2018/03/em-breve.gif"
-              title="Lorem"
+              image="https://cdn.dribbble.com/users/1342137/screenshots/9193455/planets_cover_4x.jpg"
+              title="Star Wars"
             />
             <CardContent>
-              <Typography gutterBottom variant="h5" component="div">
-                Lorem
+              <Typography gutterBottom variant="h6" component="div">
+                Star Wars Planets
               </Typography>
               <Typography variant="body2" color="text.secondary">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Foi desenvolvido uma lista com filtros de planetas do universo de Star Wars
               </Typography>
             </CardContent>
             <CardActions>
@@ -195,8 +195,7 @@ export const PageProjeto: React.FC = () => {
                 Site
               </Button>
               <Button
-                disabled
-                href="#"
+                href="https://github.com/andrelucca99/star-wars-planets"
                 target="_blank"
                 size="small"
               >
