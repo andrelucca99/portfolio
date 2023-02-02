@@ -207,29 +207,27 @@ export const PageProjeto: React.FC = () => {
           <Card sx={{ maxWidth: 220, height: 270 }}>
             <CardMedia
               sx={{ height: 100 }}
-              image="https://ckstudiodabeleza.files.wordpress.com/2018/03/em-breve.gif"
+              image="https://weethub.com/wp-content/uploads/2016/08/erros-no-e-commerce-o-que-nunca-fazer-na-sua-loja-virtual_15320171852530.jpg"
               title="Lorem"
             />
             <CardContent>
               <Typography gutterBottom variant="h5" component="div">
-                Lorem
+                E-commerce
               </Typography>
               <Typography variant="body2" color="text.secondary">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Foi desenvolvido uma pagina de e-commerce
               </Typography>
             </CardContent>
             <CardActions>
               <Button
-                disabled
-                href="#"
+                href="https://e-commerce-eight-plum.vercel.app/"
                 target="_blank"
                 size="small"
               >
                 Site
               </Button>
               <Button
-                disabled
-                href="#"
+                href="https://github.com/andrelucca99/E-COMMERCE"
                 target="_blank"
                 size="small"
               >
