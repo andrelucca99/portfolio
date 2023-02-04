@@ -47,9 +47,15 @@ export const PageSobre: React.FC = () => {
               lineHeight: 2,
               bgcolor: "#7158e2",
               borderRadius: "5px 0 0 5px",
+              textAlign: "justify",
             }}
           >
-            Olá, seja bem vindo! me chamo André Lucas, sou Desenvolverdor Front-end. Sou pessoa que gosta de analisar todo o cenário ao meu redor e com a ajuda da tecnologia, busco por desenvolver soluções que possam gerar um impacto positivo na vida das pessoas usuárias, sempre priorizando a inovação e a acessibilidade. Agora estudo Desenvolvimento Web na Trybe, uma escola que ensina a programar, a aprender e a trabalhar. Trabalho e acredito em ações que possam gerar um impacto positivo na vida das pessoas.
+            <Typography sx={{ textAlign: "left", marginBottom: 2 }}>Olá, Seja bem vindo!</Typography>
+
+            Me chamo André Lucas, sou Desenvolverdor Front-end. Sou apaixonado por Tecnologia e por tudo que ela pode criar em diferentes cenários ao meu redor, busco por desenvolver soluções que possam gerar um impacto positivo na vida das pessoas, sempre priorizando a inovação e a acessibilidade. Agora estudo Desenvolvimento Web na Trybe, uma escola que ensina a programar, a aprender e a trabalhar.
+            <Typography sx={{ textAlign: "center", marginTop: 2, fontSize: 13, }}>
+              "Sucesso é encontrar aquilo que se tenciona ser e depois fazer o que é necessário para isso."
+            </Typography>
           </Typography>
         </Grid>
         <Grid
@@ -86,7 +92,12 @@ export const PageSobre: React.FC = () => {
               justifyContent: 'center',
             }}
           >
-            <Typography variant="h5" sx={{ margin: 2, }}>Principais Stacks que utilizo no dia a dia</Typography>
+            <Typography
+              variant="h5"
+              sx={{ margin: 2, }}
+            >
+              Habilidades Técnicas
+            </Typography>
 
             <Box>
               <Grid

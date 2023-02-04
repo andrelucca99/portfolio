@@ -45,14 +45,25 @@ export const Home = () => {
               lineHeight: 2,
               padding: 3,
               color: "#fff",
+              marginBottom: -2,
+              textAlign: "justify",
             }}
           >
-            Olá, seja bem vindo! me chamo André Lucas, sou Desenvolverdor Front-end. Sou pessoa que gosta de analisar todo o cenário ao meu redor e com a ajuda da tecnologia, busco por desenvolver soluções que possam gerar um impacto positivo na vida das pessoas usuárias, sempre priorizando a inovação e a acessibilidade.
+            <Typography sx={{ textAlign: "left", marginBottom: 2 }}>Olá, Seja bem vindo!</Typography>
+            
+            Me chamo André Lucas, sou Desenvolverdor Front-end. Sou apaixonado por Tecnologia e por tudo que ela pode criar em diferentes cenários ao meu redor, busco por desenvolver soluções que possam gerar um impacto positivo na vida das pessoas, sempre priorizando a inovação...
           </Typography>
 
           <Button
             onClick={() => navigate('/sobre')}
-            sx={{ bgcolor: '#432ea1', marginLeft: 2, color: "#fff", padding: 1 }}
+            sx={{
+              // bgcolor: '#432ea1',
+              bgcolor: '#432ea1',
+              marginLeft: 2,
+              color: "#fff",
+              padding: 1,
+              marginBottom: 2,
+            }}
           >
             Saiba mais
           </Button>
@@ -110,27 +121,27 @@ export const Home = () => {
               <Card sx={{ maxWidth: 220, height: 270 }}>
                 <CardMedia
                   sx={{ height: 100 }}
-                  image="https://andrelucca99.github.io/img/livro.gif"
-                  title="Os 3 porquinhos"
+                  image="https://weethub.com/wp-content/uploads/2016/08/erros-no-e-commerce-o-que-nunca-fazer-na-sua-loja-virtual_15320171852530.jpg"
+                  title="E-commerce"
                 />
                 <CardContent>
                   <Typography gutterBottom variant="h5" component="div">
-                    Os 3 porquinhos
+                    E-commerce
                   </Typography>
                   <Typography variant="body2" color="text.secondary">
-                    Projeto, para treinar meu HTML e CSS e com uma ajudinha de JavaScript.
+                    Nesse projeto, foi desenvolvido uma página de e-commerce de produtos.
                   </Typography>
                 </CardContent>
                 <CardActions>
                   <Button
-                    href="https://book-orpin.vercel.app/"
+                    href="https://e-commerce-eight-plum.vercel.app/"
                     target="_blank"
                     size="small"
                   >
                     Site
                   </Button>
                   <Button
-                    href="https://github.com/andrelucca99/Book/"
+                    href="https://github.com/andrelucca99/E-COMMERCE"
                     target="_blank"
                     size="small"
                   >
@@ -150,7 +161,7 @@ export const Home = () => {
                     Cadastros
                   </Typography>
                   <Typography variant="body2" color="text.secondary">
-                    você poderá criar um CRUD de cadastros de pessoa e cidades.
+                    Nessa aplicação você poderá criar um CRUD de cadastros de pessoa e cidades.
                   </Typography>
                 </CardContent>
                 <CardActions>
@@ -183,7 +194,7 @@ export const Home = () => {
                     Star Wars
                   </Typography>
                   <Typography variant="body2" color="text.secondary">
-                    Projeto, para treinar meu HTML e CSS e com uma ajudinha de JavaScript.
+                    Nesse Projeto, foi construído um Dashboard com o tema de Star Wars.
                   </Typography>
                 </CardContent>
                 <CardActions>

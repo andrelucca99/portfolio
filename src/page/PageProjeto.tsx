@@ -72,7 +72,7 @@ export const PageProjeto: React.FC = () => {
                 Star Wars
               </Typography>
               <Typography variant="body2" color="text.secondary">
-                Projeto, para treinar meu HTML e CSS e com uma ajudinha de JavaScript.
+                Nesse Projeto, foi construído um Dashboard com o tema de Star Wars.
               </Typography>
             </CardContent>
             <CardActions>
@@ -149,7 +149,7 @@ export const PageProjeto: React.FC = () => {
                 Cadastros
               </Typography>
               <Typography variant="body2" color="text.secondary">
-                você poderá criar um CRUD de cadastros de pessoa e cidades.
+                Nessa aplicação você poderá criar um CRUD de cadastros de pessoa e cidades.
               </Typography>
             </CardContent>
             <CardActions>
@@ -208,14 +208,14 @@ export const PageProjeto: React.FC = () => {
             <CardMedia
               sx={{ height: 100 }}
               image="https://weethub.com/wp-content/uploads/2016/08/erros-no-e-commerce-o-que-nunca-fazer-na-sua-loja-virtual_15320171852530.jpg"
-              title="Lorem"
+              title="E-commerce"
             />
             <CardContent>
               <Typography gutterBottom variant="h5" component="div">
                 E-commerce
               </Typography>
               <Typography variant="body2" color="text.secondary">
-                Foi desenvolvido uma pagina de e-commerce
+                Nesse projeto, foi desenvolvido uma página de e-commerce de produtos.
               </Typography>
             </CardContent>
             <CardActions>
