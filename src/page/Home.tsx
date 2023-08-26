@@ -24,7 +24,7 @@ export const Home = () => {
   const navigate = useNavigate();
 
   return (
-    <LayoutBaseDePagina titulo="Olá, Seja bem vindo! ">
+    <LayoutBaseDePagina titulo="</> André">
       <Grid
         container
         spacing={10}
@@ -118,15 +118,13 @@ export const Home = () => {
           lg={12}
           xl={12}
           sx={{
-            padding: 5,
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
             flexDirection: "column",
-            margin: "0 auto",
           }}
         >
-          <Typography variant="h5" gutterBottom padding={1}>
+          <Typography variant="h4" gutterBottom padding={1}>
             Projetos
           </Typography>
 
@@ -151,28 +149,20 @@ export const Home = () => {
               <Card sx={{ maxWidth: 220, height: 270 }}>
                 <CardMedia
                   sx={{ height: 100 }}
-                  image="https://weethub.com/wp-content/uploads/2016/08/erros-no-e-commerce-o-que-nunca-fazer-na-sua-loja-virtual_15320171852530.jpg"
-                  title="E-commerce"
+                  image="https://raw.githubusercontent.com/andrelucca99/jornada-milhas/main/src/assets/imagens/jornada-milhas.png"
+                  title="Jornada Milhas"
                 />
                 <CardContent>
                   <Typography gutterBottom variant="h5" component="div">
-                    E-commerce
+                    Jornada Milhas
                   </Typography>
                   <Typography variant="body2" color="text.secondary">
-                    Nesse projeto, foi desenvolvido uma página de e-commerce de
-                    produtos.
+                    Jornada Milhas, é uma plataforma de venda de passagens aéreas.
                   </Typography>
                 </CardContent>
                 <CardActions>
                   <Button
-                    href="https://e-commerce-eight-plum.vercel.app/"
-                    target="_blank"
-                    size="small"
-                  >
-                    Site
-                  </Button>
-                  <Button
-                    href="https://github.com/andrelucca99/E-COMMERCE"
+                    href="https://github.com/andrelucca99/jornada-milhas"
                     target="_blank"
                     size="small"
                   >
@@ -197,9 +187,6 @@ export const Home = () => {
                   </Typography>
                 </CardContent>
                 <CardActions>
-                  <Button disabled href="#" target="_blank" size="small">
-                    Site
-                  </Button>
                   <Button
                     href="https://github.com/andrelucca99/react-typescript-material-ui"
                     target="_blank"
