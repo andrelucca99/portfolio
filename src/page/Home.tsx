@@ -15,6 +15,7 @@ import {
 } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import { LayoutBaseDePagina } from "../shared/layouts";
+import { projects } from "../mock/projects";
 
 export const Home = () => {
   const theme = useTheme();
@@ -146,82 +147,32 @@ export const Home = () => {
                 borderRadius: 2,
               }}
             >
-              <Card sx={{ maxWidth: 220, height: 270 }}>
-                <CardMedia
-                  sx={{ height: 100 }}
-                  image="https://raw.githubusercontent.com/andrelucca99/jornada-milhas/main/src/assets/imagens/jornada-milhas.png"
-                  title="Jornada Milhas"
-                />
-                <CardContent>
-                  <Typography gutterBottom variant="h5" component="div">
-                    Jornada Milhas
-                  </Typography>
-                  <Typography variant="body2" color="text.secondary">
-                    Jornada Milhas, é uma plataforma de venda de passagens aéreas.
-                  </Typography>
-                </CardContent>
-                <CardActions>
-                  <Button
-                    href="https://github.com/andrelucca99/jornada-milhas"
-                    target="_blank"
-                    size="small"
-                  >
-                    Repositorio
-                  </Button>
-                </CardActions>
-              </Card>
 
-              <Card sx={{ maxWidth: 220, height: 270 }}>
+              {projects.map((project) => (
+                <Card key={project.id} sx={{ maxWidth: 220, height: 270 }}>
                 <CardMedia
                   sx={{ height: 100 }}
-                  image="https://github.com/andrelucca99/react-typescript-material-ui/raw/master/src/app.gif"
-                  title="Cadastros de pessoas"
+                  image={project.image}
+                  title={project.title}
                 />
                 <CardContent>
                   <Typography gutterBottom variant="h5" component="div">
-                    Cadastros
+                    {project.title}
                   </Typography>
                   <Typography variant="body2" color="text.secondary">
-                    Nessa aplicação você poderá criar um CRUD de cadastros de
-                    pessoa e cidades.
+                    {project.description}
                   </Typography>
                 </CardContent>
                 <CardActions>
                   <Button
-                    href="https://github.com/andrelucca99/react-typescript-material-ui"
-                    target="_blank"
-                    size="small"
-                  >
-                    Repositorio
-                  </Button>
-                </CardActions>
-              </Card>
-
-              <Card sx={{ maxWidth: 220, height: 270 }}>
-                <CardMedia
-                  sx={{ height: 100 }}
-                  image="https://andrelucca99.github.io/img/star.gif"
-                  title="Star Wars"
-                />
-                <CardContent>
-                  <Typography gutterBottom variant="h5" component="div">
-                    Star Wars
-                  </Typography>
-                  <Typography variant="body2" color="text.secondary">
-                    Nesse Projeto, foi construído um Dashboard com o tema de
-                    Star Wars.
-                  </Typography>
-                </CardContent>
-                <CardActions>
-                  <Button
-                    href="https://dashboard-star-wars-one.vercel.app/"
+                    href={project.site}
                     target="_blank"
                     size="small"
                   >
                     Site
                   </Button>
                   <Button
-                    href="https://github.com/andrelucca99/Dashboard_Star-Wars"
+                    href={project.repositorio}
                     target="_blank"
                     size="small"
                   >
@@ -229,6 +180,7 @@ export const Home = () => {
                   </Button>
                 </CardActions>
               </Card>
+              ))}
             </Box>
           </Container>
 
