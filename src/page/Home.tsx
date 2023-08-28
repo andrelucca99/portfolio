@@ -15,7 +15,7 @@ import {
 } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import { LayoutBaseDePagina } from "../shared/layouts";
-import { projects } from "../mock/projects";
+import { projectsHome } from "../mock/projects";
 
 export const Home = () => {
   const theme = useTheme();
@@ -148,7 +148,7 @@ export const Home = () => {
               }}
             >
 
-              {projects.map((project) => (
+              {projectsHome.map((project) => (
                 <Card key={project.id} sx={{ maxWidth: 220, height: 270 }}>
                 <CardMedia
                   sx={{ height: 100 }}
@@ -168,6 +168,7 @@ export const Home = () => {
                     href={project.site}
                     target="_blank"
                     size="small"
+                    disabled={project.site === '' ? true : false }
                   >
                     Site
                   </Button>
