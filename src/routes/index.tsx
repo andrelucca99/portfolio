@@ -2,7 +2,6 @@ import { useEffect } from 'react';
 import { Navigate, Route, Routes } from 'react-router-dom';
 import {
   Home,
-  PageContato,
   PageProjeto,
   PageSobre,
 } from '../page';
@@ -41,8 +40,6 @@ export const AppRoutes = () => {
       <Route path="/pagina-inicial" element={<Home />} />
       <Route path="/sobre" element={<PageSobre />} />
       <Route path="/projetos" element={<PageProjeto />} />
-      {/* <Route path="/contato" element={<PageContato />} /> */}
-
       <Route path="*" element={<Navigate to="/pagina-inicial" />} />
     </Routes>
   );

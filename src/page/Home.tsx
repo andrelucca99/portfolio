@@ -123,6 +123,7 @@ export const Home = () => {
             alignItems: "center",
             justifyContent: "center",
             flexDirection: "column",
+            paddingBottom: "50px"
           }}
         >
           <Typography variant="h4" gutterBottom padding={1}>
