@@ -1,7 +1,9 @@
 import {
   Avatar,
   Box,
+  Button,
   Grid,
+  Link,
   Typography,
   useMediaQuery,
   useTheme,
@@ -121,7 +123,7 @@ export const PageSobre: React.FC = () => {
               marginLeft: -1,
             }}
           >
-            <Typography variant="h5" sx={{ padding: 2, alignItems: "center" }}>
+            <Typography variant="h4" sx={{ padding: 2, alignItems: "center" }}>
               Habilidades Técnicas
             </Typography>
 
@@ -156,6 +158,138 @@ export const PageSobre: React.FC = () => {
                 </Grid>
               ))}
             </Grid>
+          </Box>
+        </Grid>
+
+        <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
+          <Box
+            sx={{
+              bgcolor: "#025581",
+              borderRadius: 1,
+              padding: 1,
+              display: "flex",
+              alignItems: "center",
+              flexDirection: "column",
+              justifyContent: "space-between",
+              marginLeft: -1,
+            }}
+          >
+            <Typography variant="h4" sx={{ padding: 2, alignItems: "center" }}>
+              Formação
+            </Typography>
+
+            <Grid
+              item
+              xs={12}
+              sm={12}
+              md={12}
+              lg={12}
+              xl={12}
+              sx={{
+                width: "100%",
+                // backgroundColor: "red",
+                display: "flex",
+                flexWrap: "wrap",
+                justifyContent: "space-between",
+                gap: "10px"
+              }}
+            >
+              <Box
+                sx={{
+                  width: "300px",
+                  height: "150px",
+                  // backgroundColor: "yellow",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                }}
+              >
+                <img
+                  src="https://www.betrybe.com/static/images/logo-negative-green.svg"
+                />
+              </Box>
+
+              <Box
+                sx={{
+                  width: "700px",
+                  height: "160px",
+                  // backgroundColor: "blue",
+                }}
+              >
+                <Typography variant="body1">
+                  A Trybe é uma a escola mais orientada para sua carreira em tech.
+                  Em 12 meses de estudo torne-se uma pessoa desenvolvedora full-stack pronta para o mercado de trabalho, com a formação exclusiva da Trybe.
+                </Typography>
+
+                <Button
+                  sx={{ background: "#206c9a", marginTop: "50px" }}
+                >
+                  <Link
+                    href="https://www.betrybe.com/"
+                    underline="none"
+                    color="white"
+                  >Saiba mais</Link>
+                </Button>
+              </Box>
+
+              <Box
+                sx={{
+                  width: "100%",
+                  height: "280px",
+                  // backgroundColor: "green",
+                  display: "flex",
+                  flexDirection: "column",
+                  alignItems: "center"
+                }}
+              >
+                <Typography variant="h5">Certificados</Typography>
+
+                <Box
+                  sx={{
+                    width: "100%",
+                    height: "250px",
+                    // backgroundColor: "pink",
+                    display: "flex",
+                    justifyContent: "space-between",
+                    alignItems: "center",
+                    gap: "5px",
+                  }}
+                >
+                  <Box
+                    sx={{
+                      width: "25%",
+                      height: "200px",
+                      backgroundColor: "#DFF6DB",
+                    }}
+                  >modulo 1</Box>
+
+                  <Box
+                    sx={{
+                      width: "25%",
+                      height: "200px",
+                      backgroundColor: "#DFF6DB"
+                    }}
+                  >modulo 2</Box>
+
+                  <Box
+                    sx={{
+                      width: "25%",
+                      height: "200px",
+                      backgroundColor: "#DFF6DB"
+                    }}
+                  >modulo 3</Box>
+
+                  <Box
+                    sx={{
+                      width: "25%",
+                      height: "200px",
+                      backgroundColor: "#DFF6DB"
+                    }}
+                  >modulo 4</Box>
+                </Box>
+              </Box>
+            </Grid>
+
           </Box>
         </Grid>
       </Grid>
