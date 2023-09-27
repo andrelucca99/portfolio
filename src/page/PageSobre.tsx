@@ -243,6 +243,7 @@ export const PageSobre: React.FC = () => {
                     sx={{
                       width: "100%",
                       height: "200px",
+                      paggind: 5,
                     }}
                     cols={4}
                   >
