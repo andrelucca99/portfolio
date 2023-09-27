@@ -3,50 +3,21 @@ import {
   Box,
   Button,
   Grid,
-  Link,
+  ImageList,
+  ImageListItem,
   Typography,
   useMediaQuery,
   useTheme,
 } from "@mui/material";
 import { LayoutBaseDePagina } from "../shared/layouts";
 import { medalhas } from "../utils/medalhas";
+import { certificados } from "../utils/certificados";
 
 export const PageSobre: React.FC = () => {
   const theme = useTheme();
   const smDown = useMediaQuery(theme.breakpoints.down("sm"));
   const mdDown = useMediaQuery(theme.breakpoints.down("md"));
   const lgDown = useMediaQuery(theme.breakpoints.down("lg"));
-
-  // const medalhas = [
-  //   {
-  //     imagem: "https://www.w3.org/html/logo/downloads/HTML5_Badge_512.png",
-  //     name: "HTML",
-  //   },
-  //   {
-  //     imagem:
-  //       "https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/CSS3_logo.svg/250px-CSS3_logo.svg.png",
-  //     name: "CSS",
-  //   },
-  //   {
-  //     imagem:
-  //       "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/1200px-Unofficial_JavaScript_logo_2.svg.png",
-  //     name: "JavaScript",
-  //   },
-  //   {
-  //     imagem:
-  //       "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1200px-React-icon.svg.png",
-  //     name: "REACT",
-  //   },
-  //   {
-  //     imagem: "https://testing-library.com/img/octopus-128x128.png",
-  //     name: "Testing Library",
-  //   },
-  //   {
-  //     imagem:
-  //       "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Typescript_logo_2020.svg/1200px-Typescript_logo_2020.svg.png",
-  //     name: "TypeScript",
-  //   },
-  // ];
 
   return (
     <LayoutBaseDePagina titulo="Sobre">
@@ -171,75 +142,89 @@ export const PageSobre: React.FC = () => {
               alignItems: "center",
               flexDirection: "column",
               justifyContent: "space-between",
+              gap: 2,
               marginLeft: -1,
             }}
           >
-            <Typography variant="h4" sx={{ padding: 2, alignItems: "center" }}>
-              Formação
-            </Typography>
-
-            <Grid
-              item
-              xs={12}
-              sm={12}
-              md={12}
-              lg={12}
-              xl={12}
+            <Box
               sx={{
-                width: "100%",
-                // backgroundColor: "red",
+                marginTop: 5,
                 display: "flex",
-                flexWrap: "wrap",
-                justifyContent: "space-between",
-                gap: "10px"
+                alignItems: smDown
+                  ? "center"
+                  : "space-between" && mdDown
+                  ? "center"
+                  : "space-between" && lgDown
+                  ? "center"
+                  : "space-between",
+                justifyContent: smDown
+                  ? "center"
+                  : "space-between" && mdDown
+                  ? "center"
+                  : "space-between" && lgDown
+                  ? "center"
+                  : "space-between",
+                flexDirection: smDown
+                  ? "column"
+                  : "row" && mdDown
+                  ? "column"
+                  : "row" && lgDown
+                  ? "column"
+                  : "row",
               }}
             >
-              <Box
-                sx={{
-                  width: "300px",
-                  height: "150px",
-                  // backgroundColor: "yellow",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                }}
-              >
-                <img
-                  src="https://www.betrybe.com/static/images/logo-negative-green.svg"
-                />
-              </Box>
+              <Avatar variant="rounded"
+                sx={{ width: 250, height: 56, padding: 10 }}
+                src="https://www.betrybe.com/static/images/logo-negative-green.svg"
+              />
 
               <Box
                 sx={{
-                  width: "700px",
-                  height: "160px",
-                  // backgroundColor: "blue",
+                  display: "flex",
+                  alignItems: lgDown ? "center" : "start",
+                  justifyContent: lgDown ? "center" : "space-between",
+                  flexDirection: "column",
                 }}
               >
-                <Typography variant="body1">
-                  A Trybe é uma a escola mais orientada para sua carreira em tech.
+                <Typography variant="h5" sx={{ padding: 2, textAlign: "center" }}>
+                  Formação acadêmica
+                </Typography>
+
+                <Typography
+                  variant="body1"
+                  sx={{
+                    padding: smDown ? 7 : 2,
+                    textAlign: smDown
+                     ? "justify"
+                     : "start",
+                  }}>
+                  A Trybe é uma a escola de curso livre, orientada para sua carreira em tech.
                   Em 12 meses de estudo torne-se uma pessoa desenvolvedora full-stack pronta para o mercado de trabalho, com a formação exclusiva da Trybe.
                 </Typography>
 
                 <Button
-                  sx={{ background: "#206c9a", marginTop: "50px" }}
+                  sx={{
+                    backgroundColor: "#138A0F",
+                    color: "#FFFFFF",
+                    width: "25%"
+                  }}
+                  href="https://www.betrybe.com/"
+                  target="_blank"
+                  size="small"
                 >
-                  <Link
-                    href="https://www.betrybe.com/"
-                    underline="none"
-                    color="white"
-                  >Saiba mais</Link>
+                  Ver página
                 </Button>
               </Box>
+            </Box>
 
-              <Box
+            <Box
                 sx={{
                   width: "100%",
                   height: "280px",
-                  // backgroundColor: "green",
                   display: "flex",
                   flexDirection: "column",
-                  alignItems: "center"
+                  alignItems: "center",
+                  marginTop: 5,
                 }}
               >
                 <Typography variant="h5">Certificados</Typography>
@@ -248,48 +233,33 @@ export const PageSobre: React.FC = () => {
                   sx={{
                     width: "100%",
                     height: "250px",
-                    // backgroundColor: "pink",
                     display: "flex",
                     justifyContent: "space-between",
                     alignItems: "center",
                     gap: "5px",
                   }}
                 >
-                  <Box
+                  <ImageList
                     sx={{
-                      width: "25%",
+                      width: "100%",
                       height: "200px",
-                      backgroundColor: "#DFF6DB",
                     }}
-                  >modulo 1</Box>
+                    cols={4}
+                  >
+                    {certificados.map((item) => (
+                      <ImageListItem key={item.imagem}>
+                        <img
+                          srcSet={`${item.imagem}?w=164&h=164&fit=crop&auto=format&dpr=2 2x`}
+                          src={`${item.imagem}?w=164&h=164&fit=crop&auto=format`}
+                          alt={item.alt}
+                          loading="lazy"
+                        />
+                      </ImageListItem>
+                    ))}
+                  </ImageList>
 
-                  <Box
-                    sx={{
-                      width: "25%",
-                      height: "200px",
-                      backgroundColor: "#DFF6DB"
-                    }}
-                  >modulo 2</Box>
-
-                  <Box
-                    sx={{
-                      width: "25%",
-                      height: "200px",
-                      backgroundColor: "#DFF6DB"
-                    }}
-                  >modulo 3</Box>
-
-                  <Box
-                    sx={{
-                      width: "25%",
-                      height: "200px",
-                      backgroundColor: "#DFF6DB"
-                    }}
-                  >modulo 4</Box>
                 </Box>
               </Box>
-            </Grid>
-
           </Box>
         </Grid>
       </Grid>
