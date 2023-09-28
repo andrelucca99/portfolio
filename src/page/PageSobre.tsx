@@ -3,8 +3,6 @@ import {
   Box,
   Button,
   Grid,
-  ImageList,
-  ImageListItem,
   Typography,
   useMediaQuery,
   useTheme,
@@ -20,7 +18,7 @@ export const PageSobre: React.FC = () => {
   const lgDown = useMediaQuery(theme.breakpoints.down("lg"));
 
   return (
-    <LayoutBaseDePagina titulo="Sobre">
+    <LayoutBaseDePagina titulo="</> Sobre">
       <Grid container spacing={1} sx={{ padding: 4, color: "#fff" }}>
         <Grid
           item
@@ -55,7 +53,7 @@ export const PageSobre: React.FC = () => {
             component="div"
             sx={{
               padding: 5,
-              marginTop: smDown ? 1 : 1 && lgDown ? -1 : -1,
+              marginTop: smDown ? 1 : 1 && mdDown ? 1 : 0 && lgDown ? -1 : -1,
               marginLeft: smDown ? -1 : -1 && mdDown ? -1 : 1,
               lineHeight: 2,
               bgcolor: "#025581",
@@ -64,13 +62,11 @@ export const PageSobre: React.FC = () => {
             }}
           >
             <Typography variant="subtitle1">
-              Me chamo André Lucas, sou Desenvolverdor Front-end. Sou apaixonado
+              Me chamo André, sou Desenvolverdor Front-end. Apaixonado
               por Tecnologia e por tudo que ela pode criar em diferentes
               cenários ao meu redor, busco por desenvolver soluções que possam
               gerar um impacto positivo na vida das pessoas, sempre priorizando
-              a inovação e a acessibilidade. Agora estudo Desenvolvimento Web na
-              Trybe, uma escola que ensina a programar, a aprender e a
-              trabalhar.
+              a inovação e a acessibilidade.
             </Typography>
             <Typography
               sx={{ textAlign: "center", marginTop: 2, fontSize: 15 }}
@@ -94,7 +90,7 @@ export const PageSobre: React.FC = () => {
               marginLeft: -1,
             }}
           >
-            <Typography variant="h4" sx={{ padding: 2, alignItems: "center" }}>
+            <Typography variant="h5" sx={{ padding: 2, alignItems: "center" }}>
               Habilidades Técnicas
             </Typography>
 
@@ -193,13 +189,13 @@ export const PageSobre: React.FC = () => {
                 <Typography
                   variant="body1"
                   sx={{
-                    padding: smDown ? 7 : 2,
+                    padding: smDown ? 7 : 0,
                     textAlign: smDown
                      ? "justify"
                      : "start",
                   }}>
                   A Trybe é uma a escola de curso livre, orientada para sua carreira em tech.
-                  Em 12 meses de estudo torne-se uma pessoa desenvolvedora full-stack pronta para o mercado de trabalho, com a formação exclusiva da Trybe.
+                  Em 12 meses de estudo você pode se torna uma pessoa desenvolvedora full-stack pronta para o mercado de trabalho, com a formação exclusiva da Trybe. Para saber mais acesse a página deles para mais informações.
                 </Typography>
 
                 <Button
@@ -220,11 +216,13 @@ export const PageSobre: React.FC = () => {
             <Box
                 sx={{
                   width: "100%",
-                  height: "280px",
+                  height: "100%",
                   display: "flex",
                   flexDirection: "column",
                   alignItems: "center",
+                  justifyContent: "flex-start",
                   marginTop: 5,
+                  gap: 2,
                 }}
               >
                 <Typography variant="h5">Certificados</Typography>
@@ -232,32 +230,35 @@ export const PageSobre: React.FC = () => {
                 <Box
                   sx={{
                     width: "100%",
-                    height: "250px",
-                    display: "flex",
-                    justifyContent: "space-between",
+                    height: "100%",
+                    display: "flex",                    
+                    justifyContent: "center",
                     alignItems: "center",
+                    flexWrap: lgDown ? "nowrap" : "wrap",
+                    flexDirection: lgDown ? "column" : "",
                     gap: "5px",
                   }}
                 >
-                  <ImageList
-                    sx={{
-                      width: "100%",
-                      height: "200px",
-                      paggind: 5,
-                    }}
-                    cols={4}
-                  >
-                    {certificados.map((item) => (
-                      <ImageListItem key={item.imagem}>
-                        <img
-                          srcSet={`${item.imagem}?w=164&h=164&fit=crop&auto=format&dpr=2 2x`}
-                          src={`${item.imagem}?w=164&h=164&fit=crop&auto=format`}
-                          alt={item.alt}
-                          loading="lazy"
-                        />
-                      </ImageListItem>
-                    ))}
-                  </ImageList>
+                  {
+                    certificados.map((item) => (
+                      <Avatar
+                        variant="rounded"
+                        src={item.imagem}
+                        alt={item.alt}
+                        key={item.alt}
+                        sx={{
+                          width: smDown
+                          ? "100%"
+                          : "50%" && mdDown
+                          ? "60%"
+                          : "25%" && lgDown
+                          ? "25%"
+                          : "30%",
+                          height: "200px",
+                        }}
+                      />
+                    ))
+                  }
 
                 </Box>
               </Box>

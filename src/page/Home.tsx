@@ -63,9 +63,9 @@ export const Home = () => {
                 marginBottom: 2,
               }}
             >
-              Olá, Seja bem vindo!
+              Boas-vindas
             </Typography>
-            Me chamo André Lucas, sou Desenvolverdor Front-end. Sou apaixonado
+            Me chamo André, sou Desenvolverdor Front-end. Apaixonado
             por Tecnologia e por tudo que ela pode criar em diferentes cenários
             ao meu redor, busco por desenvolver soluções que possam gerar um
             impacto positivo na vida das pessoas, sempre priorizando a

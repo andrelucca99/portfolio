@@ -20,7 +20,7 @@ export const PageProjeto: React.FC = () => {
   const lgDown = useMediaQuery(theme.breakpoints.down("lg"));
 
   return (
-    <LayoutBaseDePagina titulo="Projetos">
+    <LayoutBaseDePagina titulo="</> Projetos">
       <Container
         fixed
         sx={{

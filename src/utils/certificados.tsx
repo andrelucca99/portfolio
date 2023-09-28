@@ -15,4 +15,8 @@ export const certificados = [
     imagem: "https://images.credential.net/embed/7cnjteen.png",
     alt: "Módulo Ciência da Computação",
   },
+  {
+    imagem: "https://images.credential.net/embed/1r81u8mi.png",
+    alt: "Módulo Ciência da Computação",
+  },
 ];
