@@ -44,7 +44,6 @@ export const Home = () => {
           sx={{
             bgcolor: "#025581",
             display: "flex",
-            flexDirection: "column",
             gap: 5,
           }}
         >
@@ -95,7 +94,7 @@ export const Home = () => {
           md={6}
           lg={4}
           sx={{
-            display: "flex",
+            display: smDown ? "none" : "flex",
             alignItems: "center",
             justifyContent: "center",
             bgcolor: "#025581",
@@ -106,6 +105,7 @@ export const Home = () => {
               height: theme.spacing(20),
               width: theme.spacing(20),
               border: "2px solid #206c9a",
+              marginRight: mdDown ? 8 : 0,
             }}
             src="https://media1.giphy.com/media/qgQUggAC3Pfv687qPC/giphy.gif?cid=ecf05e47oz1ey4dlvjq9lkh4g9u5tprizv0rw4oh0fzxxybm&rid=giphy.gif&ct=g"
           />
