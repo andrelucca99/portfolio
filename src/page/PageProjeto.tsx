@@ -32,6 +32,8 @@ export const PageProjeto: React.FC = () => {
             height: "100%",
             width: "100%",
             padding: 1,
+            paddingTop: 2,
+            paddingBottom: 2,
             display: "grid",
             gridTemplateColumns: smDown
               ? "repeat(2, 1fr)"
@@ -39,9 +41,9 @@ export const PageProjeto: React.FC = () => {
               ? "repeat(2, 1fr)"
               : "repeat(3, 1fr)" && lgDown
               ? "repeat(3, 1fr)"
-              : "repeat(3, 1fr)",
+              : "repeat(4, 1fr)",
             gridColumnGap: "1em",
-            gridRowGap: "5em",
+            gridRowGap: "2em",
           }}
         >
           {pageProjects.map((project) => (
