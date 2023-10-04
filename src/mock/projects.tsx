@@ -82,4 +82,12 @@ export const pageProjects = [
     site: 'https://game-boy-alpha.vercel.app/',
     repositorio: 'https://github.com/andrelucca99/game-boy',
   },
+  {
+    id: 8,
+    title: 'Memoteca',
+    description: 'Memoteca, foi desenvolvida para seus usuários salvarem suas frases de filmes/séries preferidas',
+    image: 'https://github.com/andrelucca99/memoteca/raw/main/src/assets/imagens/tela-app.gif',
+    site: '',
+    repositorio: 'https://github.com/andrelucca99/memoteca',
+  },
 ]
