@@ -90,4 +90,12 @@ export const pageProjects = [
     site: '',
     repositorio: 'https://github.com/andrelucca99/memoteca',
   },
+  {
+    id: 9,
+    title: 'Lista de Países',
+    description: 'Mini projeto da Codante.io, para implemente uma lista de países usando NextJS',
+    image: 'https://user-images.githubusercontent.com/6475893/246307700-5f35397c-f71e-4319-90b1-2ba970600a88.png',
+    site: 'https://mp-lista-de-paises-next-liard.vercel.app/',
+    repositorio: 'https://github.com/andrelucca99/mp-lista-de-paises-next',
+  },
 ]
