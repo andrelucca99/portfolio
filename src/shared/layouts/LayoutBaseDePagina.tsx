@@ -49,6 +49,24 @@ export const LayoutBaseDePagina: React.FC<ILayoutBaseDePaginaProps> = ({ childre
 
       <Box flex={1} overflow="auto">
         {children}
+
+        <Box sx={{
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          justifyContent: "center",
+          gap: 0,
+          width: "100%",
+          height: "80px",
+          bgcolor: "#025581",
+          typography: 'subtitle2',
+          fontWeight: 'regular',
+          fontSize: 16,
+          textAlign: "center",
+          color: "#fff",
+        }}>
+          <p>Desenvolvido por André Lucas <br />copyright &copy; 2023</p>
+        </Box>
       </Box>
     </Box>
   );

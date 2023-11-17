@@ -25,6 +25,7 @@ export const PageProjeto: React.FC = () => {
         fixed
         sx={{
           bgcolor: "#025581",
+          marginBottom: 5
         }}
       >
         <Box
